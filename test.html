@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Слайдер</title>
+    <style>
+      .slider {
+        width: 600px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 10px;
+        margin: 40px auto;
+        position: relative;
+      }
+
+      .slides {
+        display: flex;
+        width: 300%;
+        animation: slide 9s infinite;
+      }
+
+      .slides img {
+        width: 100%;
+        height: auto;
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(0%);
+        }
+        33.33% {
+          transform: translateX(-100%);
+        }
+        66.66% {
+          transform: translateX(-200%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slides">
+        <img src="/img/helper.png" alt="Слайд 1" />
+        <img src="/img/cooki.png" alt="Слайд 2" />
+        <img
+          src="https://via.placeholder.com/600x300/ccffcc/000000?text=Слайд+3"
+          alt="Слайд 3"
+        />
+      </div>
+    </div>
+  </body>
+</html>
